@@ -12,8 +12,8 @@ A Django REST Framework API for logging door access events with signal-based sys
 
 ## Requirements
 
-- Python 3.8+
-- Django 4.x
+- Python 3.12+
+- Django 6.x
 - Django REST Framework
 - django-filter
 
@@ -46,7 +46,32 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-The API will be available at `http://127.0.0.1:8000/api/logs/`
+The application will be available at:
+- **API:** `http://127.0.0.1:8000/api/logs/`
+- **Admin:** `http://127.0.0.1:8000/admin/`
+- **Root:** `http://127.0.0.1:8000/` (auto-redirects to API)
+
+---
+
+## Docker Support
+
+### Build and Run with Docker
+```bash
+docker build -t access-control-api .
+docker run -p 8000:8000 access-control-api
+```
+
+## UI Samples
+
+### Admin Panel
+![Admin Panel](screenshots/admin_panel.png)
+
+### User Panel
+![User Panel](screenshots/user_panel.png)
+
+### Single Log View
+![Single Log View](screenshots/single_log.png)
+
 
 
 
